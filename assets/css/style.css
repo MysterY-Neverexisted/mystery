@@ -1,0 +1,69 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: #000;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.video-bg-wrap {
+    position: absolute;
+}
+
+video {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    animation: transition 3s;
+    filter: brightness(25%);
+}
+
+@keyframes transition {
+    0% {
+        filter: brightness(0%)
+    }
+    100% {
+        filter: brightness(25%);
+    }
+}
+
+.intro-wrap {
+    position: absolute;
+    margin-top: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.intro-header img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.intro-wrap h1 {
+    margin: 10px;
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+.intro-wrap p {
+    margin: 10px;
+    font-size: 25px;
+}
